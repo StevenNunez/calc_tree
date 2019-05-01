@@ -51,5 +51,8 @@ release :calc_tree do
   set applications: [
     :runtime_tools
   ]
+  set appup_transforms: [
+    {CalcTree.Transform, [default: :brutal_purge, overrides: [test: :soft_purge]]}
+  ]
 end
 

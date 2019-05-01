@@ -7,7 +7,8 @@ defmodule CalcTree.CalcSupervisor do
 
   def init(:ok) do
     children = [
-      CalcTree.Calc.Adder
+      CalcTree.Calc.Adder,
+      CalcTree.Calc.Multiplier
     ]
 
     Supervisor.init(children, strategy: :one_for_one)
